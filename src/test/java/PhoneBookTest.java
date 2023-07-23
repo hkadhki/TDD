@@ -16,4 +16,17 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void testFindByNumber(){
+        PhoneBook phoneBook = new PhoneBook();
+        final String argumentNumber = "1111111";
+        final String argumentNane = "aaa";
+        phoneBook.add(argumentNane,argumentNumber);
+        final String expected = "aaa";
+
+        final String result = phoneBook.findByNumber(argumentNumber);
+
+        Assertions.assertEquals(expected, result);
+    }
 }
