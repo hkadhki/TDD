@@ -25,4 +25,9 @@ public class PhoneBook {
     public String findByNumber(String number){
         return reversePhoneBook.get(number);
     }
+
+
+    public String findByName(String number){
+        return null;
+    }
 }

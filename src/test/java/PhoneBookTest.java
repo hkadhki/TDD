@@ -29,4 +29,17 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void testFindByName(){
+        PhoneBook phoneBook = new PhoneBook();
+        final String argumentNumber = "1111111";
+        final String argumentNane = "aaa";
+        phoneBook.add(argumentNane,argumentNumber);
+        final String expected = "1111111";
+
+        final String result = phoneBook.findByName(argumentNane);
+
+        Assertions.assertEquals(expected, result);
+    }
 }
