@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,5 +30,9 @@ public class PhoneBook {
 
     public String findByName(String name){
         return phoneBook.get(name.charAt(0)).get(name);
+    }
+
+    public ArrayList<String> printAllNames(){
+        return null;
     }
 }

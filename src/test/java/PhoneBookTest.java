@@ -2,6 +2,8 @@ import org.example.PhoneBook;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class PhoneBookTest {
 
 
@@ -39,6 +41,21 @@ public class PhoneBookTest {
         final String expected = "1111111";
 
         final String result = phoneBook.findByName(argumentNane);
+
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    public void printAllNames(){
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("aaa","1111");
+        phoneBook.add("bbb","2222");
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("aaa 1111");
+        expected.add("bbb 2222");
+
+
+        final ArrayList<String> result= phoneBook.printAllNames();
 
         Assertions.assertEquals(expected, result);
     }
