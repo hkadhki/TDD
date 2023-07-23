@@ -48,8 +48,8 @@ public class PhoneBookTest {
     @Test
     public void printAllNames(){
         PhoneBook phoneBook = new PhoneBook();
-        phoneBook.add("aaa","1111");
         phoneBook.add("bbb","2222");
+        phoneBook.add("aaa","1111");
         ArrayList<String> expected = new ArrayList<>();
         expected.add("aaa 1111");
         expected.add("bbb 2222");
