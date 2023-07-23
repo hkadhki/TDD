@@ -35,6 +35,15 @@ public class PhoneBook {
     }
 
     public ArrayList<String> printAllNames(){
-        return null;
+        List<Character> characters = phoneBook.keySet().stream().sorted().collect(Collectors.toList());
+        ArrayList<String> result = new ArrayList<>();
+        for (Character character : characters){
+            List<String> list = phoneBook.get(character).keySet().stream().sorted().collect(Collectors.toList());
+            for (String name: list){
+                result.add( name+ " " + phoneBook.get(character).get(name));
+            }
+        }
+
+        return result;
     }
 }
