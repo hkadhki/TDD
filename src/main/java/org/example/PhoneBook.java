@@ -27,7 +27,7 @@ public class PhoneBook {
     }
 
 
-    public String findByName(String number){
-        return null;
+    public String findByName(String name){
+        return phoneBook.get(name.charAt(0)).get(name);
     }
 }
